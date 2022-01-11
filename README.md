@@ -22,7 +22,7 @@ Build the `IisFtpEventGridNotifier.sln` with Visual Studio. If you are building 
 
 3. Create a Json-file named `secrets.json` and fill it with your configuration:
 
-```json
+```javascript
 {
   "logFilePath": "C:\\logs\\IisFtpEventGridNotifier.log", // Set to empty to disable logging
   "eventGridEndPoint": "<your event grid topic>",
