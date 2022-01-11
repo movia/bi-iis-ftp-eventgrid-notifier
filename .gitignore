@@ -1,0 +1,22 @@
+﻿# Visual Studio
+.vs/
+
+# Visual Studio Code
+.vscode
+
+# User-specific files
+*.suo
+*.user
+
+# Nuget Packages
+packages/
+
+# Reference Assemblies
+**/Reference Assemblies/*.dll
+
+# Build results
+dist/
+[Bb]in/
+[Oo]bj/
+**/secrets.json
+
