@@ -53,7 +53,7 @@ namespace IisFtpEventGridNotifier
         }
 
         /// <summary>
-        /// Public Configuration, which allow us to this this more easily.
+        /// Public Configuration, which allow us to test this more easily.
         /// </summary>
         /// <param name="config">Configuration Object</param>
         public void Configure(StringDictionary config)
