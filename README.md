@@ -4,15 +4,15 @@ A small implementation of IIS Custom Log Provider that streams events to Azure E
 
 ## Use Case
 
-You have some legacy on-prem FTP / FTPS server running on IIS 7.5 or newer (e.g. Windows Server 2008 R2 or newer). 3rd parties are dumping file on it, and you want Azure Data Factory, an Azure Function or other event-driven components to fire, once a file has been uploaded to the server.
+You have some legacy on-prem FTP / FTPS server running on IIS 7.5 or newer (e.g. Windows Server 2008 R2 or newer). 3rd parties are dumping files on it, and you want Azure Data Factory, an Azure Function or other event-driven components to fire, once a file has been uploaded to the server.
 
 ## Build
 
-Build the `IisFtpEventGridNotifier.sln` with Visual Studio. If you are biulding this on a machine which have not installed the IIS FTP Service, then copy the `Microsoft.Web.FtpServer.dll` from your FTP server and put it into the `Reference Assemblies` folder.
+Build the `IisFtpEventGridNotifier.sln` with Visual Studio. If you are building this on a machine which have not installed the IIS FTP Service, then copy the `Microsoft.Web.FtpServer.dll` from your FTP server and put it into the `Reference Assemblies` folder.
 
 ## Installation and Configuration
 
-1. Prerequisites: You have already an Event Grid Topic created in Azure, and have the corresponding url of the *Event Grid End Point* and *Event Grid Key*.
+1. Prerequisites: You have already an Event Grid Topic created in Azure, and have the corresponding url of the *Event Grid End Point* and *Event Grid Access Key*.
 
 2. Copy the resulting `IisFtpEventGridNotifier.dll` to the server with IIS and install it into the [Global Assembly Cache](https://docs.microsoft.com/en-us/dotnet/framework/app-domains/gac), e.g. using the [GAC Util](https://docs.microsoft.com/en-us/dotnet/framework/tools/gacutil-exe-gac-tool) that ships with Visual Studio:
 
@@ -31,7 +31,7 @@ Build the `IisFtpEventGridNotifier.sln` with Visual Studio. If you are biulding 
 }
 ```
 
-4. Run `register-iis.ps1` to install and activate the Custom Log Provider for the site named `Default FTP Site` (ajust the script id your FTP site is named differently).
+4. Run `register-iis.ps1` to install and activate the Custom Log Provider for the site named `Default FTP Site` (ajust the script if your FTP site is named differently).
 
 :point_right: Rembember to execute this from an evaluated prompt (e.g. Run as Administrator)
 
