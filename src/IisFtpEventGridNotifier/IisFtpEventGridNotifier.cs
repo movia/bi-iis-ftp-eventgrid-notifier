@@ -21,7 +21,7 @@ namespace IisFtpEventGridNotifier
         /* We are using DataContractJsonSerializer to get as minimal dependencies as possible */
         private readonly DataContractJsonSerializer eventSerializer = new DataContractJsonSerializer(typeof(EventGridEvent[]), new DataContractJsonSerializerSettings
         {
-            DateTimeFormat = new DateTimeFormat("yyyy-MM-dd hh:mm:ss"),
+            DateTimeFormat = new DateTimeFormat("yyyy-MM-dd HH:mm:ss"),
         });
 
         private string SerializeEvent(EventGridEvent eventGridEvent)
